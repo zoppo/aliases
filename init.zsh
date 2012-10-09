@@ -1,5 +1,5 @@
-typeset -a programs
-zstyle -a ':zoppo:plugin:alias' programs programs
+zdefault -a ':zoppo:plugin:alias' programs programs \
+  'git' 'rsync' 'perl' 'ruby' 'python'
 
 for program ("$programs[@]")
   source-relative "aliases/$program" || print "alias: $program: program not found"

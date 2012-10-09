@@ -13,10 +13,6 @@ alias rors='_rails-command server'
 alias rorsd='_rails-command server --debugger'
 alias rorx='_rails-command destroy'
 
-#
-# Functions
-#
-
 function _rails-command {
   if [[ -e "script/server" ]]; then
     ruby script/"$@"
