@@ -2,7 +2,7 @@ zdefault -a ':zoppo:plugin:aliases' programs programs \
   'git' 'rsync' 'perl' 'ruby' 'python'
 
 for program ("$programs[@]")
-  source-relative "aliases/$program" || print "aliases: $program: program not found"
+  source-relative "aliases/$program" || warn "aliases: $program: program not found"
 
 unset programs program
 
